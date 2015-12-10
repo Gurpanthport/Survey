@@ -1,0 +1,43 @@
+<% include ../partials/header.ejs %>
+
+<main class="container">
+    <div class="col-sm-6">
+    <h1>Users</h1>
+        <div class="col-sm-20">
+
+        <!-- panel-heading -->
+            <h1>Welcome,  <%= displayName.toUpperCase() %></h1>
+            <form method="post">
+                <fieldset class="form-group">
+                    <label for="surveyTopic">Survey Topic*</label>
+                    <input name="surveyTopic" type="text" class="form-control" required autofocus />
+                </fieldset>
+                <fieldset>
+                    <div class="radioButtons">
+                        <label for="">Choose template*</label><br>
+                        <label class="radio-inline"><input type="radio" name="optradio">Multiple choice question</label>
+                        <label class="radio-inline"><input type="radio" name="optradio">Content survey</label><br>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label for="">Survey lifetime</label><br>
+                    <div class="input-group input-daterange">
+                        <input type="date" class="form-control">
+                        <span class="input-group-addon">to</span>
+                        <input type="date" class="form-control">
+                    </div>
+                </fieldset>
+                <fieldset class="form-group text-right">
+                    <input type="submit" class="btn btn-success" value="Submit"/>
+                </fieldset>
+            </form>
+
+            </div>
+</div>
+
+        </div> <!-- panel-body -->
+
+    </div><!-- panel panel-default -->
+
+</main>
+<% include ../partials/footer.ejs %>
